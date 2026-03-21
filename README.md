@@ -1,4 +1,4 @@
-# 张欣 - 个人作品集网站
+# 张新 - 个人作品集网站
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
@@ -149,4 +149,4 @@ zhangxin-website/
 
 ---
 
-由张欣用心制作
+由张新用心制作

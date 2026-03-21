@@ -57,7 +57,7 @@ export default function HeroSection() {
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
                 你好，我是{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                  张欣
+                  张新
                 </span>
               </h1>
 
