@@ -1,125 +1,93 @@
-import { User, Target, Award, Brain, Heart, GraduationCap } from "lucide-react";
-
 export default function AboutSection() {
-  const features = [
-    {
-      icon: Heart,
-      title: "以人为本",
-      description: "尊重每个来访者的独特性，建立温暖、安全、信任的咨询关系。",
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      icon: Brain,
-      title: "专业科学",
-      description: "基于心理学理论研究和临床实践经验，提供科学有效的心理干预。",
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: Award,
-      title: "卓越品质",
-      description: "持续学习最新的心理学理论和技术，确保咨询服务的专业性和有效性。",
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: GraduationCap,
-      title: "教育引导",
-      description: "帮助来访者掌握心理调适技能，提升自我认知和情绪管理能力。",
-      color: "from-orange-500 to-red-500",
-    },
-  ];
-
   return (
-    <div className="py-24 lg:py-32">
+    <div className="py-24 lg:py-32 bg-gray-50 dark:bg-gray-900/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-4">
-              个人介绍
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 text-sm font-medium mb-4 border border-blue-100 dark:border-blue-800">
+              关于我
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              专业心理咨询师 &{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                心理学研究者
-              </span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+              张新
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              拥有8年以上心理咨询经验，专注于整合性心理咨询和子人格疗法的研究和实践。
-              致力于帮助来访者实现心理成长，建立健康的心理模式。
-            </p>
+            <p className="text-lg text-gray-500 dark:text-gray-400">心理咨询师 · 子人格疗法创始人</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 lg:p-12">
-                  <h3 className="text-2xl font-bold mb-6">我的理念</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-6">
-                    我相信每个人都拥有自我治愈和成长的内在力量。心理咨询的核心在于创造一个安全、
-                    温暖的空间，帮助来访者探索内心世界，识别并整合自我不同面向。
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-8">
-                    每个人都是一个复杂而完整的存在，包含多个子人格。子人格疗法的目标是帮助个体
-                    认识、接纳并整合这些不同面向，达到内心的和谐与平衡。
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <span className="px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm">
-                      心理咨询
-                    </span>
-                    <span className="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm">
-                      子人格疗法
-                    </span>
-                    <span className="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm">
-                      情绪管理
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute -z-10 -top-4 -left-4 w-24 h-24 bg-blue-400/20 rounded-full blur-xl" />
-                <div className="absolute -z-10 -bottom-4 -right-4 w-32 h-32 bg-purple-400/20 rounded-full blur-xl" />
-              </div>
-            </div>
+          <div className="grid lg:grid-cols-5 gap-12 items-start">
 
-            <div className="grid grid-cols-2 gap-6">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700"
+            {/* 左侧：个人简介 */}
+            <div className="lg:col-span-3 space-y-6">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                我是一名执业心理咨询师，拥有北京师范大学心理学硕士学位，从事心理咨询工作逾八年。
+                在长期的临床实践中，我逐渐发展出一套以"子人格"为核心概念的整合性心理疗法。
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                我的工作重心在于帮助来访者认识自己内心中那些被忽视、压抑或冲突的部分——
+                我称之为"子人格"。通过温和而深入的对话，引导来访者与这些内在面向建立联结，
+                最终实现真正意义上的自我整合。
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                我擅长处理焦虑、抑郁、自我认同困惑、亲密关系困境以及早年创伤等议题。
+                我相信，每一次内心的冲突背后，都藏着一个渴望被看见的自己。
+              </p>
+
+              <div className="pt-4 flex flex-wrap gap-2">
+                {["焦虑与抑郁", "自我认同", "亲密关系", "早年创伤", "情绪调节", "个人成长"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm border border-gray-200 dark:border-gray-700"
                   >
-                    <div
-                      className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${feature.color} mb-4`}
-                    >
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-bold text-lg mb-2">{feature.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                );
-              })}
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 lg:p-12">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 mb-2">
-                  500+
+            {/* 右侧：基本信息 */}
+            <div className="lg:col-span-2 space-y-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">基本信息</h3>
+                <div className="space-y-3 text-sm">
+                  {[
+                    { label: "学历", value: "心理学硕士（北京师范大学）" },
+                    { label: "资质", value: "国家二级心理咨询师" },
+                    { label: "从业", value: "2016年至今" },
+                    { label: "所在地", value: "北京" },
+                    { label: "咨询方式", value: "线下 / 线上均可" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex justify-between">
+                      <span className="text-gray-500 dark:text-gray-400">{item.label}</span>
+                      <span className="text-gray-800 dark:text-gray-200 font-medium text-right">{item.value}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="text-gray-700 dark:text-gray-300">个案咨询</div>
               </div>
-              <div>
-                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-2">
-                  200+
-                </div>
-                <div className="text-gray-700 dark:text-gray-300">团体工作坊</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600 mb-2">
-                  98%
-                </div>
-                <div className="text-gray-700 dark:text-gray-300">来访者满意度</div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">专业认证</h3>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-0.5">·</span>
+                    国家二级心理咨询师
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-0.5">·</span>
+                    中国心理学会会员
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-0.5">·</span>
+                    IFS（内在家庭系统）认证培训
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-0.5">·</span>
+                    正念认知疗法（MBCT）培训
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-0.5">·</span>
+                    创伤知情实践认证
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

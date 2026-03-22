@@ -14,14 +14,14 @@ export default function Home() {
       <section id="about">
         <AboutSection />
       </section>
-      <section id="therapy">
-        <TherapySection />
-      </section>
       <section id="qualifications">
         <QualificationsSection />
       </section>
       <section id="experience">
         <ExperienceSection />
+      </section>
+      <section id="therapy">
+        <TherapySection />
       </section>
       <section id="contact">
         <ContactSection />

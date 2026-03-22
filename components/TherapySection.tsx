@@ -1,201 +1,128 @@
 "use client";
 
-import { Heart, Brain, Users, Target, ArrowRight, Star, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const therapyPrinciples = [
+const steps = [
   {
-    icon: Heart,
-    title: "自我接纳",
-    description: "帮助来访者认识并接纳自己的各个子人格，消除内心的冲突与矛盾。",
-    color: "from-blue-500 to-cyan-500",
-    featured: true,
+    number: "01",
+    title: "识别子人格",
+    description:
+      "通过引导性对话，帮助来访者觉察内心中不同的声音与反应模式——那个总是自我批评的声音、那个渴望被爱的内在小孩、那个习惯保护自己的防御者……",
   },
   {
-    icon: Brain,
-    title: "内在整合",
-    description: "协助不同子人格之间的对话与合作，建立和谐的内在关系。",
-    color: "from-purple-500 to-pink-500",
-    featured: true,
+    number: "02",
+    title: "建立联结",
+    description:
+      "以好奇而非评判的态度，与每一个子人格建立真实的对话关系。理解它们存在的原因，看见它们背后未被满足的需求。",
   },
   {
-    icon: Users,
-    title: "关系和谐",
-    description: "通过内在子人格的整合，改善人际关系和社交能力。",
-    color: "from-green-500 to-emerald-500",
-    featured: false,
+    number: "03",
+    title: "化解冲突",
+    description:
+      "当不同子人格之间存在对立与冲突时，引导它们相互理解，找到共同的立场，减少内耗，恢复内在的协调与平衡。",
   },
   {
-    icon: Target,
-    title: "目标达成",
-    description: "激活潜力子人格，帮助实现个人成长和人生目标。",
-    color: "from-orange-500 to-red-500",
-    featured: false,
+    number: "04",
+    title: "整合成长",
+    description:
+      "随着各子人格逐渐被接纳与整合，来访者会体验到更稳定的自我感、更清晰的边界感，以及更真实的情感表达能力。",
   },
-  {
-    icon: Star,
-    title: "潜能开发",
-    description: "发掘隐藏的子人格资源，提升创造力和问题解决能力。",
-    color: "from-yellow-500 to-orange-500",
-    featured: false,
-  },
-  {
-    icon: Sparkles,
-    title: "灵性成长",
-    description: "连接更深层的自我，实现心灵的整合与超越。",
-    color: "from-indigo-500 to-blue-500",
-    featured: false,
-  },
+];
+
+const applications = [
+  { title: "焦虑与内耗", desc: "内心不同声音的持续冲突往往是焦虑的根源，子人格疗法直接处理这一核心机制。" },
+  { title: "自我价值感低", desc: "识别并疗愈那个长期自我批评的子人格，重建健康的自我认知。" },
+  { title: "亲密关系困境", desc: "内在关系模式决定外在关系质量，整合内在才能真正改变关系。" },
+  { title: "早年创伤", desc: "温和地接触并疗愈那些在创伤中形成的保护性子人格。" },
+  { title: "身份认同困惑", desc: "帮助来访者在多元的内在面向中找到稳定的自我核心。" },
+  { title: "情绪失调", desc: "理解情绪背后的子人格需求，从根本上提升情绪调节能力。" },
 ];
 
 export default function TherapySection() {
   return (
-    <div className="py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black">
+    <div className="py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+
+          {/* 标题 */}
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300 text-sm font-medium mb-4 border border-purple-100 dark:border-purple-800">
               子人格疗法
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              探索内在世界的{" "}
+              认识你内心的{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                整合之旅
+                每一个自己
               </span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12">
-              子人格疗法是一种创新的心理咨询方法，帮助个体认识和整合内心不同面向，
-              实现内在的和谐与平衡，促进心理成长和个人发展。
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              子人格疗法是我在多年临床实践中发展出的整合性心理疗法，
+              核心理念是：我们每个人内心都不是单一的，而是由多个"子人格"共同构成的复杂系统。
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 lg:p-12">
-                  <h3 className="text-2xl font-bold mb-6">什么是子人格疗法？</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-6">
-                    子人格疗法基于这样的理解：每个人内心都存在多个不同的"子人格"，
-                    这些子人格代表了我们在不同情境下展现的不同面向。它们可能是保护者、
-                    批评者、内在小孩、创造者等不同的角色。
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-8">
-                    通过子人格疗法，来访者可以学习认识、接纳并整合这些不同的内在部分，
-                    减少内心的冲突，增强自我意识和情绪调节能力，最终实现更加和谐、
-                    完整的存在状态。
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <span className="px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm">
-                      创伤疗愈
-                    </span>
-                    <span className="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm">
-                      情绪管理
-                    </span>
-                    <span className="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm">
-                      自我成长
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute -z-10 -top-4 -left-4 w-24 h-24 bg-blue-400/20 rounded-full blur-xl" />
-                <div className="absolute -z-10 -bottom-4 -right-4 w-32 h-32 bg-purple-400/20 rounded-full blur-xl" />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              {therapyPrinciples.slice(0, 4).map((principle, index) => {
-                const Icon = principle.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700"
-                  >
-                    <div
-                      className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${principle.color} mb-4`}
-                    >
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-bold text-lg mb-2">{principle.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      {principle.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+          {/* 核心理念 */}
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 lg:p-10 mb-16 border border-blue-100/50 dark:border-gray-700">
+            <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">什么是子人格？</h3>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              子人格是我们在成长过程中，为了应对不同情境和需求而形成的内在角色。
+              它们可能是一个严苛的内在批评者、一个渴望认可的讨好者、一个习惯逃避的保护者，
+              或是一个从未被允许长大的内在小孩。
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              这些子人格本身并无好坏之分——它们都是在特定时期为了保护我们而诞生的。
+              问题在于，当它们之间缺乏沟通与协调时，就会产生内耗、冲突和痛苦。
+              子人格疗法的目标，正是帮助这些内在部分重新建立联结，走向整合。
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {therapyPrinciples.map((principle, index) => {
-              const Icon = principle.icon;
-              return (
+          {/* 疗法步骤 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">疗法流程</h3>
+            <div className="space-y-6">
+              {steps.map((step) => (
                 <div
-                  key={index}
-                  className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
+                  key={step.number}
+                  className="flex gap-6 bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="relative h-48 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-4xl font-bold text-white/20">内在探索</div>
-                    </div>
-                    {principle.featured && (
-                      <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold flex items-center">
-                        <Star className="h-3 w-3 mr-1" fill="white" />
-                        核心理念
-                      </div>
-                    )}
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
+                    {step.number}
                   </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div
-                        className={`inline-flex p-2 rounded-lg bg-gradient-to-br ${principle.color} mr-3`}
-                      >
-                        <Icon className="h-5 w-5 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {principle.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">
-                      {principle.description}
-                    </p>
-                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-2 transition-all" />
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">{step.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 lg:p-12">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 mb-2">
-                  焦虑缓解
+          {/* 适用场景 */}
+          <div>
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">适用议题</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {applications.map((app) => (
+                <div
+                  key={app.title}
+                  className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:border-blue-200 dark:hover:border-blue-700 transition-colors"
+                >
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">{app.title}</h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{app.desc}</p>
                 </div>
-                <div className="text-gray-700 dark:text-gray-300">通过子人格对话减轻内心冲突</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-2">
-                  情绪调节
-                </div>
-                <div className="text-gray-700 dark:text-gray-300">增强情绪意识和自我调节能力</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600 mb-2">
-                  自我成长
-                </div>
-                <div className="text-gray-700 dark:text-gray-300">发掘潜能，实现个人发展目标</div>
-              </div>
+              ))}
             </div>
-            <div className="text-center mt-8">
+
+            <div className="text-center mt-10">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group"
+                className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:underline group"
               >
-                了解更多关于子人格疗法
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                想了解更多，欢迎预约初次咨询
+                <ArrowRight className="ml-1.5 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
