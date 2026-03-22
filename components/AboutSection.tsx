@@ -13,7 +13,7 @@ export default function AboutSection() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               张新
             </h2>
-            <p className="text-lg text-gray-500 dark:text-gray-400">心理咨询师 · 子人格疗法创始人</p>
+            <p className="text-lg text-gray-500 dark:text-gray-400">心理咨询师 · 子人格疗法（SPT）创始人</p>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -34,40 +34,19 @@ export default function AboutSection() {
             {/* 右侧：个人简介 */}
             <div className="lg:col-span-8 space-y-6">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                我是一名执业心理咨询师，从业逾十年。在长期的临床实践中，我融合精神分析、客体关系、认知行为疗法CBT、接纳承诺疗法ACT、内在家庭系统IFS、正念减压MBSR、钻石途径、禅宗、阳明心学等多种方法，发展出独特的<strong>子人格疗法（SPT）</strong>。
+                我是一名执业心理咨询师，从业超<strong>10年</strong>。在长期的临床实践中，我融合精神分析、客体关系、认知行为疗法CBT、接纳承诺疗法ACT、内在家庭系统IFS、正念减压MBSR、钻石途径、禅宗、阳明心学等多种方法，发展出独特的<strong>子人格疗法（SPT）</strong>。
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                子人格疗法认为：人的内心并非单一的整体，而是由一个"真我"（Self）和多个"子人格"（Sub-personalities/内心小人）共同组成的结构。
-                每一次内心的冲突背后，都藏着一个渴望被看见的自己。
+                <strong>子人格疗法（SPT）</strong>是"巨人肩膀上开出的独特花朵"。疗法认为人的内心并非单一的整体，
+                而是由一个"真我"（Self）和多个"子人格"（Sub-personalities/内心小人）共同组成的结构。
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                我的工作旨在帮助来访者认识、接纳并整合这些内在的不同面向——通过"虚拟满足，现实解脱"的转化逻辑，
-                让真我的光芒自然显现，实现内心的和平与解脱。
+                每一次内心的冲突背后，都藏着一个渴望被看见的自己。我的工作正是帮助这些内在部分重新建立联结，
+                通过"虚拟满足，现实解脱"的转化逻辑，让真我的光芒自然显现，实现内心的和平与解脱。
               </p>
 
               <div className="pt-4 flex flex-wrap gap-2">
-                {["焦虑与内耗", "社交恐惧", "拖延症", "亲密关系", "原生家庭创伤", "自我成长"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm border border-gray-200 dark:border-gray-700"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                我的工作重心在于帮助来访者认识自己内心中那些被忽视、压抑或冲突的部分——
-                我称之为"子人格"。通过温和而深入的对话，引导来访者与这些内在面向建立联结，
-                最终实现真正意义上的自我整合。
-              </p>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                我擅长处理焦虑、抑郁、自我认同困惑、亲密关系困境以及早年创伤等议题。
-                我相信，每一次内心的冲突背后，都藏着一个渴望被看见的自己。
-              </p>
-
-              <div className="pt-4 flex flex-wrap gap-2">
-                {["焦虑与抑郁", "自我认同", "亲密关系", "早年创伤", "情绪调节", "个人成长"].map((tag) => (
+                {["焦虑与内耗", "社交恐惧", "拖延症", "亲密关系", "原生家庭创伤", "自我成长", "迷茫感"].map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm border border-gray-200 dark:border-gray-700"
@@ -141,6 +120,31 @@ export default function AboutSection() {
                       500+ 成功个案
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* App介绍 */}
+            <div className="lg:col-span-12 mt-8">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-3">配套App《完美状态》</h3>
+                    <p className="text-blue-100 mb-4">
+                      疗法配套App，帮助你记录练习过程，跟踪内心成长。从学到练，让改变真正发生。
+                    </p>
+                    <ul className="space-y-2 text-sm text-blue-100">
+                      <li>✓ 咨询师带领演练</li>
+                      <li>✓ 个人自主练习</li>
+                      <li>✓ 全程记录追踪</li>
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-2xl mb-3">
+                      <span className="text-4xl">📱</span>
+                    </div>
+                    <p className="text-sm text-blue-100">扫码下载 App</p>
+                  </div>
                 </div>
               </div>
             </div>

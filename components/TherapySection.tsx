@@ -43,7 +43,26 @@ const applications = [
   { title: "亲密关系困境", desc: "内在关系模式决定外在关系质量，整合内在才能真正改变关系。" },
   { title: "原生家庭创伤", desc: "通过「时空穿越」找回小时候受伤的自己，重新养育，获得疗愈。" },
   { title: "身份认同困惑", desc: "帮助来访者在多元的内在面向中找到稳定的自我核心。" },
-  { title: "拖延与逃避", desc: "理解拖延背后的子人格需求，从根本上改变行为模式。" },
+  { title: "拖延与迷茫", desc: "理解拖延背后的子人格需求，从根本上改变行为模式。" },
+];
+
+const faqs = [
+  {
+    q: "如何在头脑中满足子人格的需求？",
+    a: "头脑是一个充满想象力的空间，在其中你可以不受现实世界物理规则的限制。你可以大胆构思各种场景，给予子人格他们渴望的事物。例如，为害怕社交的孩子构建一个友善的世界，或让失恋的子人格在平行世界中获得理想伴侣的爱护。"
+  },
+  {
+    q: "为什么虚拟构想的场景能让子人格快速平复？",
+    a: "当我们将子人格视为独立且真实的个体时，他们的需求也是真实的。满足这些需求的最佳方式是直接提供他们渴望的东西，而不是讲道理。这好比面对哭闹的饥饿孩子，给他一片面包比任何说教都有效。"
+  },
+  {
+    q: "这种做法是否属于「阿Q精神」？",
+    a: "两者有本质区别。「阿Q精神」是自我认同了那个受害者身份并进行自我麻痹，而子人格疗法强调「他是他，我是我」。你是在帮助内心的「小人」获得满足，从而让「真我」从负面情绪中剥离出来，以更清晰的头脑应对现实。"
+  },
+  {
+    q: "总是忍不住想分析情绪的来源，会影响效果吗？",
+    a: "分析（理智思考）和练习（情感转化）是两条路。过度分析会成为障碍。核心建议是「先解渴再研究」：闭上眼直接对话并安抚它，等内心平静、真我显现后，再去反思这个小人的成因和模式。"
+  },
 ];
 
 export default function TherapySection() {
@@ -141,6 +160,31 @@ export default function TherapySection() {
                 想了解更多，欢迎预约初次咨询
                 <ArrowRight className="ml-1.5 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
+            </div>
+          </div>
+
+          {/* 问答集锦 */}
+          <div className="mt-20">
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">问答集锦</h3>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="font-medium text-gray-800 dark:text-gray-200 pr-4">{faq.q}</span>
+                    <span className="flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
 
