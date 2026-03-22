@@ -38,17 +38,17 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      title: "邮箱",
-      value: "zhangxin@email.com",
-      link: "mailto:zhangxin@email.com",
-      color: "from-blue-500 to-cyan-500",
+      title: "微信",
+      value: "zhangxin_Self",
+      link: "weixin://",
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: Phone,
       title: "电话",
       value: "138-0000-0000",
       link: "tel:13800000000",
-      color: "from-green-500 to-emerald-500",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: MapPin,

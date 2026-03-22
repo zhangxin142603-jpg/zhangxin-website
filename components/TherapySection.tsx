@@ -1,31 +1,39 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Eye, Search, Sparkles, Sun } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "识别子人格",
-    description:
-      "通过引导性对话，帮助来访者觉察内心中不同的声音与反应模式——那个总是自我批评的声音、那个渴望被爱的内在小孩、那个习惯保护自己的防御者……",
+    icon: Eye,
+    title: "觉察",
+    subtitle: "Awareness",
+    description: "敏锐捕捉内心的负面感受或不良行为，通过自我询问发现当前状态偏离了「轻松、自在、无所畏惧」的基准线，从而锁定需要改变的心理卡点。",
+    core: "核心评判标准：经常询问自己「我现在是否感到轻松、自在和无畏？」。如果感受到任何压力、顾虑或不适，意味着真我已被某个特定的子人格所遮蔽。",
   },
   {
     number: "02",
-    title: "建立联结",
-    description:
-      "以好奇而非评判的态度，与每一个子人格建立真实的对话关系。理解它们存在的原因，看见它们背后未被满足的需求。",
+    icon: Search,
+    title: "内观",
+    subtitle: "Introspection",
+    description: "闭目向内探索并具象化地识别出主导当前情绪的「子人格」形象（如其年龄、着装、表情及内心想法），并以友善好奇的态度与其建立联结。",
+    core: "关键要点：将抽象情绪转化为活生生、具象化的个体形象。意识到「既然我能看到他，那么他就不是我」「他是他，我是我」。",
   },
   {
     number: "03",
-    title: "化解冲突",
-    description:
-      "当不同子人格之间存在对立与冲突时，引导它们相互理解，找到共同的立场，减少内耗，恢复内在的协调与平衡。",
+    icon: Sparkles,
+    title: "转变",
+    subtitle: "Transformation",
+    description: "在头脑的理想世界中极致满足子人格的匮乏需求，使其负面情绪释放并转化为正向状态，从而交出意识舞台的主导权。",
+    core: "核心逻辑：虚拟满足，现实解脱。打破现实限制，利用天马行空的想象。满足要追求「充分」甚至「加倍」，让子人格感受到「爽」或彻底的释然。",
   },
   {
     number: "04",
-    title: "整合成长",
-    description:
-      "随着各子人格逐渐被接纳与整合，来访者会体验到更稳定的自我感、更清晰的边界感，以及更真实的情感表达能力。",
+    icon: Sun,
+    title: "真我",
+    subtitle: "Self",
+    description: "子人格被安抚后回归到本自具足的清明状态，表现为以轻松、自信且充满智慧的「观察者」视角主导现实生活，实现内心的和平与解脱。",
+    core: "真我本身是完整、圆满且不匮乏的，天然具备自信、清晰和智慧等特质。这就像「拨开云雾见太阳」，让原本就存在于内心的光芒自然呈现。",
   },
 ];
 
@@ -33,21 +41,21 @@ const applications = [
   { title: "焦虑与内耗", desc: "内心不同声音的持续冲突往往是焦虑的根源，子人格疗法直接处理这一核心机制。" },
   { title: "自我价值感低", desc: "识别并疗愈那个长期自我批评的子人格，重建健康的自我认知。" },
   { title: "亲密关系困境", desc: "内在关系模式决定外在关系质量，整合内在才能真正改变关系。" },
-  { title: "早年创伤", desc: "温和地接触并疗愈那些在创伤中形成的保护性子人格。" },
+  { title: "原生家庭创伤", desc: "通过「时空穿越」找回小时候受伤的自己，重新养育，获得疗愈。" },
   { title: "身份认同困惑", desc: "帮助来访者在多元的内在面向中找到稳定的自我核心。" },
-  { title: "情绪失调", desc: "理解情绪背后的子人格需求，从根本上提升情绪调节能力。" },
+  { title: "拖延与逃避", desc: "理解拖延背后的子人格需求，从根本上改变行为模式。" },
 ];
 
 export default function TherapySection() {
   return (
     <div className="py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
 
           {/* 标题 */}
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300 text-sm font-medium mb-4 border border-purple-100 dark:border-purple-800">
-              子人格疗法
+              子人格疗法 SPT
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               认识你内心的{" "}
@@ -56,44 +64,57 @@ export default function TherapySection() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              子人格疗法是我在多年临床实践中发展出的整合性心理疗法，
-              核心理念是：我们每个人内心都不是单一的，而是由多个"子人格"共同构成的复杂系统。
+              子人格疗法（SPT）是融合心理疗法与修行方法并进行创新的整合性心理疗法，
+              核心理念是「1+N」多重自我模型——1个真我 + N个子人格。
             </p>
           </div>
 
           {/* 核心理念 */}
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 lg:p-10 mb-16 border border-blue-100/50 dark:border-gray-700">
-            <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">什么是子人格？</h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              子人格是我们在成长过程中，为了应对不同情境和需求而形成的内在角色。
-              它们可能是一个严苛的内在批评者、一个渴望认可的讨好者、一个习惯逃避的保护者，
-              或是一个从未被允许长大的内在小孩。
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              这些子人格本身并无好坏之分——它们都是在特定时期为了保护我们而诞生的。
-              问题在于，当它们之间缺乏沟通与协调时，就会产生内耗、冲突和痛苦。
-              子人格疗法的目标，正是帮助这些内在部分重新建立联结，走向整合。
-            </p>
+            <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">核心观点</h3>
+            <div className="space-y-4 text-gray-700 dark:text-gray-300">
+              <p>
+                <strong>「1+N」多重自我模型：</strong>疗法认为人的内心并非单一的整体，而是由一个「真我」（Self）和多个「子人格」（Sub-personalities/内心小人）共同组成的结构。
+              </p>
+              <p>
+                <strong>「金尘模型」：</strong>真我就像发光的金砖，天然具备平静、自信、清晰和慈悲等优良品质；而子人格则如同覆盖在黄金上的泥土、沙子或灰尘。心理问题的根源在于真我被特定的子人格所「淹没」或遮蔽。
+              </p>
+              <p>
+                <strong>「虚拟满足，现实解脱」：</strong>这是疗法的精髓。主张不与子人格讲道理或强行压抑，而是在头脑的理想世界中充分、甚至极致地满足子人格的匮乏需求。当子人格在内在世界感到充盈、安全并「功成身退」时，真我的光芒自然会重新显现。
+              </p>
+            </div>
           </div>
 
-          {/* 疗法步骤 */}
+          {/* 疗法四步 */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">疗法流程</h3>
-            <div className="space-y-6">
-              {steps.map((step) => (
-                <div
-                  key={step.number}
-                  className="flex gap-6 bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                    {step.number}
-                  </div>
-                  <div>
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">四步疗法</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {steps.map((step) => {
+                const Icon = step.icon;
+                return (
+                  <div
+                    key={step.number}
+                    className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <Icon className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">{step.number}</span>
+                      </div>
+                      <div className="ml-auto">
+                        <span className="text-sm text-gray-400">{step.subtitle}</span>
+                      </div>
+                    </div>
                     <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">{step.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3">{step.description}</p>
+                    <div className="pt-3 border-t border-gray-100 dark:border-gray-700">
+                      <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{step.core}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
